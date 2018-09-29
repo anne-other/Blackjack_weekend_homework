@@ -11,26 +11,12 @@ public class Game {
         this.dealer = dealer;
     }
 
-//
-//
-//    public int playerCount() {
-//        return this.players.size();
-//    }
-//
-//    public void addPlayer(Player player) {
-//        this.players.add(player);
-//    }
-//
-//    public void removePlayers() {
-//        this.players.clear();
-//    }
-//
-//    public void deal(Deck deck) {
-//        for (Player player : this.players) {
-//            Card card = deck.deal();
-//            player.addToHand(card);
-//        }
-//    }
+    public void play() {
+        for (Player player : this.players) {
+            Card card = dealer.deal(deck);
+            player.addToHand(card);
+        }
+    }
 //
 //    public Player checkWinner() {
 //        Player winner = this.players.get(0);

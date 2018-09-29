@@ -25,30 +25,14 @@ public class GameTest {
         game = new Game(players, deck, dealer);
     }
 
-//        @Test
-//        public void addPlayer() {
-//            dealer.addPlayer(player1);
-//            assertEquals(1, dealer.playerCount());
-//        }
-//
-//        @Test
-//        public void removeAllPlayers() {
-//            dealer.addPlayer(player1);
-//            assertEquals(1, dealer.playerCount());
-//            dealer.removePlayers();
-//            assertEquals(0, dealer.playerCount());
-//        }
-//
-//        @Test
-//        public void dealerCanDealACardToEachPlayer() {
-//            dealer.addPlayer(player1);
-//            dealer.addPlayer(player2);
-//            dealer.deal(deck);
-//            assertEquals(50, deck.cardCount());
-//            assertEquals(1, player1.getHandCount());
-//            assertEquals(1, player2.getHandCount());
-//        }
-//
+    @Test
+    public void canPlay() {
+        game.play();
+        assertEquals(50, deck.cardCount());
+        assertEquals(1, player1.getHandCount());
+        assertEquals(1, player2.getHandCount());
+    }
+
 //        @Test
 //        public void player1Wins() {
 //            dealer.addPlayer(player1);
