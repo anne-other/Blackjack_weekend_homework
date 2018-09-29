@@ -33,14 +33,11 @@ public class GameTest {
         assertEquals(1, player2.getHandCount());
     }
 
-//        @Test
-//        public void player1Wins() {
-//            dealer.addPlayer(player1);
-//            dealer.addPlayer(player2);
-//            player1.addToHand(new Card(Suit.SPADES, Rank.EIGHT));
-//            player2.addToHand(new Card(Suit.SPADES, Rank.FIVE));
-//            assertEquals(player1, dealer.checkWinner());
-//        }
-//    }
+    @Test
+    public void player1Wins() {
+        player1.addToHand(new Card(Suit.SPADES, Rank.EIGHT));
+        player2.addToHand(new Card(Suit.SPADES, Rank.FIVE));
+        assertEquals(player1, game.checkWinner());
+       }
+    }
 
-}

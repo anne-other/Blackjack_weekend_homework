@@ -17,14 +17,14 @@ public class Game {
             player.addToHand(card);
         }
     }
-//
-//    public Player checkWinner() {
-//        Player winner = this.players.get(0);
-//        for (Player player : this.players){
-//            if (player.getHandValue() > winner.getHandValue()){
-//                winner = player;
-//            }
-//        }
-//        return winner;
-//    }
+
+    public Player checkWinner() {
+        Player winner = this.players.get(0);
+        for (Player player : this.players){
+            if (player.getHandValue() > winner.getHandValue()){
+                winner = player;
+            }
+        }
+        return winner;
+    }
 }
