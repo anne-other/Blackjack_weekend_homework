@@ -1,11 +1,16 @@
 import java.util.ArrayList;
 
 public class Game {
-//    private ArrayList<Player> players;
-//
-//    public Dealer() {
-//        this.players = new ArrayList<>();
-//    }
+    private ArrayList<Player> players;
+    private Deck deck;
+    private Dealer dealer;
+
+    public Game(ArrayList<Player> players, Deck deck, Dealer dealer) {
+        this.players = players;
+        this.deck = deck;
+        this.dealer = dealer;
+    }
+
 //
 //
 //    public int playerCount() {
