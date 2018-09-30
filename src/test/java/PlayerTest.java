@@ -7,10 +7,11 @@ import static org.junit.Assert.assertNotNull;
 public class PlayerTest {
     Player player;
     Card card;
+    boolean dealer;
 
     @Before
     public void before(){
-        player = new Player("Anne");
+        player = new Player("Anne", true);
         card = new Card(Suit.SPADES, Rank.ACE);
     }
 
@@ -42,5 +43,10 @@ public class PlayerTest {
     public void hasHandValue() {
         player.addToHand(card);
         assertEquals(1, player.getHandValue());
+    }
+
+    @Test
+    public void playerCanBeDealer() {
+        assertEquals(true, player.getDealer());
     }
 }

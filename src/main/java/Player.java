@@ -3,14 +3,20 @@ import java.util.ArrayList;
 public class Player {
     private String name;
     private ArrayList<Card> hand;
+    private Boolean dealer;
 
-    public Player(String name) {
+    public Player(String name, Boolean dealer) {
         this.name = name;
         this.hand = new ArrayList<>();
+        this.dealer = dealer;
     }
 
     public String getName() {
         return name;
+    }
+
+    public Boolean getDealer() {
+        return dealer;
     }
 
     public int getHandCount() {
