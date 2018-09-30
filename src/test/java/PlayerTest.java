@@ -43,7 +43,7 @@ public class PlayerTest {
     @Test
     public void hasHandValue() {
         player.addToHand(card);
-        assertEquals(1, player.getHandValue());
+        assertEquals(11, player.getHandValue());
     }
 
     @Test

@@ -22,7 +22,7 @@ public class CardTest {
 
     @Test
     public void aceHasValueof1() {
-        assertEquals(1, card.getRank().getValue());
+        assertEquals(11, card.getRank().getValue());
     }
 
 }
