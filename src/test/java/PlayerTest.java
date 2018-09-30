@@ -71,4 +71,12 @@ public class PlayerTest {
         player.addToHand(card1);
         assertEquals(false, player.play());
     }
+
+    @Test
+    public void playerCanTwist() {
+        player.addToHand(card);
+        Card card1 = new Card(Suit.HEARTS, Rank.TWO);
+        player.addToHand(card1);
+        assertEquals(true, player.play());
+    }
 }
