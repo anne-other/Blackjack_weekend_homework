@@ -56,7 +56,7 @@ public class Game {
 
     public void play() {
         for(Player player : players){
-            if(player.play()){
+            while(player.play()){
                 Card card = dealer.deal(deck);
                 player.addToHand(card);
             }

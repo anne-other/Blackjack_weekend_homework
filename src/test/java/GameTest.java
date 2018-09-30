@@ -66,5 +66,17 @@ public class GameTest {
         assertEquals(2, player1.getHandCount());
         assertEquals(3, player2.getHandCount());
     }
+
+    @Test
+    public void gameContinuesUntilAllPlayersStick() {
+        player1.addToHand(new Card(Suit.SPADES, Rank.EIGHT));
+        player1.addToHand(new Card(Suit.DIAMONDS, Rank.TEN));
+        player2.addToHand(new Card(Suit.SPADES, Rank.TWO));
+        player2.addToHand(new Card(Suit.SPADES,Rank.TWO));
+        game.play();
+        assertEquals(true, deck.cardCount() < 51);
+        assertEquals(2, player1.getHandCount());
+        assertEquals(true, player2.getHandCount() > 3);
+    }
 }
 
