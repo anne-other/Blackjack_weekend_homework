@@ -49,4 +49,10 @@ public class PlayerTest {
     public void playerCanBeDealer() {
         assertEquals(true, player.getDealer());
     }
+
+    @Test
+    public void playerNotDealer() {
+        Player player1 = new Player("Richard", false);
+        assertEquals(false, player1.getDealer());
+    }
 }
