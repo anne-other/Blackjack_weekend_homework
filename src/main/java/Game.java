@@ -10,7 +10,7 @@ public class Game {
         this.deck = deck;
     }
 
-    public void play() {
+    public void startGame() {
         for (Player player : this.players) {
             Card card = player.deal(deck);
             player.addToHand(card);
@@ -40,5 +40,14 @@ public class Game {
             }
         }
         return draw;
+    }
+
+    public Player findDealer() {
+        for (Player player : players){
+            if (player.getDealer()){
+                return player;
+            }
+        }
+        return null;
     }
 }
