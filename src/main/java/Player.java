@@ -40,4 +40,10 @@ public class Player {
         return total;
     }
 
+    public Card deal(Deck deck) {
+        if (getDealer()) {
+            return deck.deal();
+        }
+        return null;
+    }
 }

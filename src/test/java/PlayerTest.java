@@ -7,12 +7,13 @@ import static org.junit.Assert.assertNotNull;
 public class PlayerTest {
     Player player;
     Card card;
-    boolean dealer;
+    Deck deck;
 
     @Before
     public void before(){
         player = new Player("Anne", true);
         card = new Card(Suit.SPADES, Rank.ACE);
+        deck = new Deck();
     }
 
     @Test
@@ -54,5 +55,12 @@ public class PlayerTest {
     public void playerNotDealer() {
         Player player1 = new Player("Richard", false);
         assertEquals(false, player1.getDealer());
+    }
+
+    @Test
+    public void playerDealerCanDeal() {
+        Card card = player.deal(deck);
+        assertNotNull(card);
+        assertEquals(51, deck.cardCount());
     }
 }
