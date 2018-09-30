@@ -4,6 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class GameTest {
     Game game;
@@ -39,5 +40,12 @@ public class GameTest {
         player2.addToHand(new Card(Suit.SPADES, Rank.FIVE));
         assertEquals(player1, game.checkWinner());
        }
+
+    @Test
+    public void drawReturnsNull() {
+        player1.addToHand(new Card(Suit.SPADES, Rank.EIGHT));
+        player2.addToHand(new Card(Suit.HEARTS, Rank.EIGHT));
+        assertNull(game.checkWinner());
     }
+}
 
