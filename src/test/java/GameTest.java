@@ -29,13 +29,13 @@ public class GameTest {
         assertEquals(player1, game.findDealer());
     }
 
-    //    @Test
-//    public void canStartGame() {
-//        game.start();
-//        assertEquals(48, deck.cardCount());
-//        assertEquals(2, player1.getHandCount());
-//        assertEquals(2, player2.getHandCount());
-//    }
+    @Test
+    public void canStartGame() {
+        game.start();
+        assertEquals(48, deck.cardCount());
+        assertEquals(2, player1.getHandCount());
+        assertEquals(2, player2.getHandCount());
+    }
 
 //    @Test
 //    public void player1Wins() {

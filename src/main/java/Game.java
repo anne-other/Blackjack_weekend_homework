@@ -4,16 +4,21 @@ public class Game {
     private ArrayList<Player> players;
     private Deck deck;
     private Player winner;
+    private Player dealer;
 
     public Game(ArrayList<Player> players, Deck deck) {
         this.players = players;
         this.deck = deck;
+        this.dealer = findDealer();
     }
 
-    public void startGame() {
+    public void start() {
         for (Player player : this.players) {
-            Card card = player.deal(deck);
+            Card card = dealer.deal(deck);
             player.addToHand(card);
+        }
+        if(dealer.getHandCount() < 2) {
+            start();
         }
     }
 
