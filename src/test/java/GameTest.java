@@ -54,5 +54,17 @@ public class GameTest {
         player2.addToHand(new Card(Suit.SPADES, Rank.QUEEN));
         assertNull(game.checkWinner());
     }
+
+    @Test
+    public void gameCanPlay() {
+        player1.addToHand(new Card(Suit.SPADES, Rank.EIGHT));
+        player1.addToHand(new Card(Suit.DIAMONDS, Rank.TEN));
+        player2.addToHand(new Card(Suit.SPADES, Rank.FIVE));
+        player2.addToHand(new Card(Suit.SPADES,Rank.TEN));
+        game.play();
+        assertEquals(51, deck.cardCount());
+        assertEquals(2, player1.getHandCount());
+        assertEquals(3, player2.getHandCount());
+    }
 }
 
