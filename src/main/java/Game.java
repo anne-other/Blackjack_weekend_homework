@@ -38,10 +38,8 @@ public class Game {
     private boolean checkDraw() {
         boolean draw = false;
         for (Player player : this.players){
-            if (player.getHandValue() == winner.getHandValue()){
+            if (player != winner && player.getHandValue() == winner.getHandValue()){
                 draw = true;
-            } else {
-                draw = false;
             }
         }
         return draw;

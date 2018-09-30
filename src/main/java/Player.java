@@ -46,4 +46,11 @@ public class Player {
         }
         return null;
     }
+
+    public boolean play() {
+        if (getHandValue() > 15) {
+            return false;
+        }
+        return true;
+    }
 }

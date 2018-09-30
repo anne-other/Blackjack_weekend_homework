@@ -63,4 +63,12 @@ public class PlayerTest {
         assertNotNull(card);
         assertEquals(51, deck.cardCount());
     }
+
+    @Test
+    public void playerCanStick() {
+        player.addToHand(card);
+        Card card1 = new Card(Suit.HEARTS, Rank.QUEEN);
+        player.addToHand(card1);
+        assertEquals(false, player.play());
+    }
 }
