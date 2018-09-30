@@ -47,6 +47,13 @@ public class PlayerTest {
     }
 
     @Test
+    public void aceCanBeLow() {
+        player.addToHand(card);
+        player.addToHand(card);
+        assertEquals(12, player.getHandValue());
+    }
+
+    @Test
     public void playerCanBeDealer() {
         assertEquals(true, player.getDealer());
     }

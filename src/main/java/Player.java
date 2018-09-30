@@ -35,7 +35,11 @@ public class Player {
     public int getHandValue() {
         int total = 0;
         for (Card card : this.hand){
-            total += card.getValue();
+            if (card.getRank() == Rank.ACE && (total + 11 >= 21)){
+                total += 1;
+            } else {
+                total += card.getValue();
+            }
         }
         return total;
     }
